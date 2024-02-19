@@ -46,6 +46,7 @@ function startGame() {
   lives = 3;
 
   gameOver = false
+
   // Configurar eventos de teclado
   document.addEventListener("keydown", keyDownHandler);
   document.addEventListener("keyup", keyUpHandler);
@@ -81,10 +82,12 @@ function startGame() {
 
   // Função principal do loop do jogo
   function gameLoop() {
+
     // Limpar o canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     if (!gameOver) {
+
       // Atualizar a posição do jogador
       updatePlayerPosition();
 
@@ -134,6 +137,7 @@ function startGame() {
 
   // Função para verificar colisões
   function checkCollisions() {
+    
     // Verificar colisões com os pudins
     for (let i = 0; i < puddings.length; i++) {
       const pudding = puddings[i];
