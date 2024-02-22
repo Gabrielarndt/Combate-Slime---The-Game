@@ -30,11 +30,14 @@ function initializeGame() {
 }
 
 function createPlayer() {
+  const margin = 10; // Margem para evitar que os slimes nasçam muito próximos das bordas
+ 
   return {
-    x: getRandomNumber(canvas.width),
-    y: getRandomNumber(canvas.height),
-    width: 50,
-    height: 50,
+    x: getRandomNumber(canvas.width - margin * 2) + margin, // Limitar a posição x dentro das margens
+    y: getRandomNumber(canvas.height - margin * 2) + margin, // Limitar a posição y dentro das margens
+   
+    width: 60,
+    height: 90,
     speed: 5,
     left: false,
     right: false,
@@ -44,11 +47,14 @@ function createPlayer() {
 }
 
 function createPudding() {
+  const margin = 10; // Margem para evitar que os slimes nasçam muito próximos das bordas
+ 
   const pudding = {
-    x: getRandomNumber(canvas.width),
-    y: getRandomNumber(canvas.height),
-    width: 30,
-    height: 30,
+    x: getRandomNumber(canvas.width - margin * 2) + margin, // Limitar a posição x dentro das margens
+    y: getRandomNumber(canvas.height - margin * 2) + margin, // Limitar a posição y dentro das margens
+    
+    width: 50,
+    height: 50,
     collected: false
   };
   puddings.push(pudding);
