@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Jogo</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="container">
-    
     <h1>Meu Jogo</h1>
-
+    <div class="cenario">
     <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <div id="hud">
+  </div>
+    <div id="hud" style="margin-top: 10px;">
       <div id="timer">Tempo restante: <span id="timeLeft">60</span> segundos</div>
       <div id="puddingCount">Pudins coletados: <span id="collectedPuddings">0</span></div>
       <div id="lives">Vidas: <span id="remainingLives">3</span></div>
     </div>
     <button id="startButton">Iniciar Jogo</button>
+    <button id="restartButton" style="display: none;">Recomeçar</button>
   </div>
 
   <script src="script.js"></script>
